@@ -26,7 +26,7 @@ public class AccountModel {
     @Column(name = "tx_name")
     private String name;
 
-    @Column(name = "tx_email")
+    @Column(name = "tx_email", unique = true)
     private String email;
 
     @Column(name = "tx_sha256")
@@ -56,6 +56,6 @@ public class AccountModel {
             .birthdate(this.birthdate)
             .creation(this.creation)
             .build();
-        }
+    }
 
 }
